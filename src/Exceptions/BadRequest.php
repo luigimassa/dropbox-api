@@ -3,7 +3,7 @@
 namespace Spatie\Dropbox\Exceptions;
 
 use Exception;
-use Psr\Http\Message\ResponseInterface;
+use GuzzleHttp\Message\Response;
 
 class BadRequest extends Exception
 {
@@ -19,7 +19,7 @@ class BadRequest extends Exception
      */
     public $dropboxCode;
 
-    public function __construct(ResponseInterface $response)
+    public function __construct(Response $response)
     {
         $this->response = $response;
 
